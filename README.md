@@ -1,17 +1,5 @@
 # DIGIMON-API
 
-A new Flutter project.
+HASIL :
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Digimon-API
+<img width="452" alt="ss digimon-api_lightmode" src="https://github.com/sefryss/List-Objek-Wisata/assets/109064862/6b8b91ec-19ba-4808-a1b1-fb7c1afbd192">
