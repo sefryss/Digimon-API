@@ -1,12 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:flutter/foundation.dart';
 part 'digimon.freezed.dart';
+part 'digimon.g.dart';
 
 @freezed
-class Digimon with _$Digimon {
-  const factory Digimon({
-    required String name,
-    required String img,
-    required String level,
-  }) = _Digimon;
+class digimon with _$digimon {
+  const factory digimon({
+    @Default('-') String name,
+    @Default('-') String img,
+    @Default('-') String level,
+  }) = _digimon;
+
+  factory digimon.fromJson(Map<String, Object?> json) =>
+      _$digimonFromJson(json);
 }
