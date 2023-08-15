@@ -3,24 +3,21 @@ import 'package:digimon_api/src/models/digimon.dart';
 
 class DigimonRepository {
   final Dio _dio = Dio();
-  final String apiUrl = "https://digimon-api.vercel.app/api/digimon";
 
-  Future<List<Digimon>> fetchDigimons() async {
+  Future<List<digimon>> getDigimon() async {
     try {
-      final response = await _dio.get(apiUrl);
-      final data = response.data as List<dynamic>;
-
-      final digimons = data
-          .map((e) => Digimon(
-                name: e['name'],
-                img: e['img'],
-                level: e['level'],
-              ))
-          .toList();
-
-      return digimons;
-    } catch (error) {
-      throw Exception('Failed to fetch digimons');
+      final response =
+          await _dio.get('https://digimon-api.vercel.app/api/digimon');
+      if (response.statusCode == 200) {
+        final List<dynamic> jsonData = response.data;
+        final List<digimon> digimons =
+            jsonData.map((data) => digimon.fromJson(data)).toList();
+        return digimons;
+      } else {
+        throw Exception('Failed to fetch data');
+      }
+    } catch (e) {
+      throw Exception('An error occurred: $e');
     }
   }
 }
